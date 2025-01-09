@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only" />
+    <meta name="supported-color-schemes" content="only" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      table {
+        border-spacing: 0;
+      }
+      td {
+        padding: 0;
+      }
+      img {
+        border: 0;
+      }
+      h1, h2, h3, h4, h5, h6, p {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      /*=========== Custom Dark Mode Colors ===========*/
+      /* :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        body, center {
+          background-color: #FFFFFE !important;
+          color: #212121 !important;
+        }
+        .darkmode-transparent {
+          background-color: transparent !important;
+        }
+        .nl-logo-light {
+          display: none !important;
+        }
+        .nl-logo-dark {
+          display: inline-block !important;
+        }
+        .text-white {
+          color: #FFFFFE !important;
+        }
+        .light-border {
+          border-color: #FFFFFE !important;
+        }
+        .bg-white {
+          background-color: #FFFFFE !important;
+        }
+        
+        .footer-dark-bg {
+          background-color: #000001 !important;
+        }
+        .light-mode-none {
+          display: none !important;
+        }
+        .dark-mode-block {
+          display: block !important;
+        }
+      } */
+
+      @media only screen and (max-width: 450px) {
+            .mobile-heading {
+                font-size: 15px !important;
+                line-height: 18px !important;
+            }
+
+            .heading-space-height {
+                height: 4px !important;
+            }
+
+            .mobile-desc {
+                font-size: 13px !important;
+                line-height: 20px !important;
+                letter-spacing: 0.065px !important;
+            }
+
+            .mobile-btn {
+                padding: 5px 16px !important;
+                font-size: 10px !important;
+                line-height: normal !important;
+                letter-spacing: 0.327px !important;
+                border-radius: 8px !important;
+            }
+
+            .mobile-w-8 {
+              width: 8px !important;
+            }
+
+            .desktop-bigbanner-btn-box {
+                display: none !important;
+                text-align: right !important;
+            }
+
+            .mobile-bigbanner-btn-box {
+                display: block !important;
+                text-align: right !important;
+            }
+
+            .bigbanner-main-height {
+                min-height: 98px !important;
+            }
+
+            .bigbanner-height {
+                height: 18px !important;
+            }
+
+            .bigbanner-height-margin {
+                margin-top: 18px !important;
+            }
+
+            .bigbanner-main-shadow {
+                min-height: 18px !important;
+                height: 95px !important;
+                padding: 8px 10px !important;
+            }
+
+            .bigbanner-mobile-btn {
+                background-color: #212121 !important;
+                padding: 4px 10px !important;
+            }
+
+            .monsterboard-main-height {
+                min-height: 206px !important;
+                height: 206px !important;
+            }
+
+            .monsterboard-height {
+                height: 76px !important;
+            }
+
+            .shoppable-mid-height {
+                height: 125px !important;
+            }
+
+            .monsterboard-height-margin {
+                margin-top: 76px !important;
+            }
+
+            .shoppable-mid-main-height {
+                min-height: 299px !important;
+                height: 299px !important;
+            }
+
+            .shoppable-mid-height-margin {
+                margin-top: 125px !important;
+            }
+
+            .monsterboard-shadow-height {
+                padding: 8px 10px 10px 10px !important;
+                height: 130px !important;
+            }
+
+            .shoppable-mid-inside-shadow-height {
+                height: 160px !important;
+                padding: 10px !important;
+            }
+
+            .shoppable-mid-shadow-height {
+                height: 100% !important;
+                padding: 10px !important;
+            }
+
+            .mobile-ad-price {
+                font-size: 13px !important;
+                line-height: 20px !important;
+                letter-spacing: 0.08px !important;
+            }
+
+            .part-width {
+                width: 152px !important;
+            }
+
+            .mobile-inside-space {
+                padding: 10px !important;
+            }
+
+            .mobile-bild-text-wrapper.mobile-inside-space {
+              padding: 6px 10px 10px 10px !important;
+            } 
+
+            .l-height {
+                height: 3px !important;
+            }
+            .secondary-l-height {
+              height: 192px !important;
+            }
+
+            .l-s-height {
+                height: 27px !important;
+            }
+
+            .align-center {
+                text-align: center !important;
+            }
+
+            /* .align-left {
+                text-align: left !important;
+            } */
+
+            .w-100 {
+                width: 100% !important;
+            }
+
+            .mobile-ads-main-height {
+                height: 299px !important;
+            }
+
+            .mobile-btn-w {
+                width: 132px !important;
+            }
+
+            .ad-full-template-img {
+                height: 207px !important;
+                min-height: 207px !important;
+                max-height: 207px !important;
+            }
+
+            .video-heading-space-height {
+                height: 4px !important;
+            }
+
+            .ad-video-template-img {
+                height: 171px !important;
+                min-height: 171px !important;
+                max-height: 171px !important;
+            }
+
+            .play-icon-img-box {
+                height: 0 !important;
+            }
+
+            .play-icon {
+                margin-top: -26% !important;
+                margin-left: 43% !important;
+            }
+
+            .video-content-box {
+                padding: 10px !important;
+            }
+
+            .sm-height {
+                height: 0 !important;
+            }
+
+            .bild-btn-desktop {
+                display: none;
+            }
+
+            .bild-row-show {
+                display: block !important;
+            }
+
+            .bild-btn-mobile {
+                display: block !important;
+                padding: 8px 0 !important;
+                width: 155px !important;
+                border-left: 8px solid transparent !important;
+                border-right: 8px solid transparent !important;
+            }
+
+            .build-img-box {
+                width: 155px !important;
+                height: 200px !important;
+            }
+
+            .bild-mobile-img {
+                width: 155px !important;
+                height: 155px !important;
+                min-height: 155px !important;
+                max-height: 155px !important;
+            }
+
+            .bild-text-box {
+                width: 300px !important;
+                /* height: 229px !important; */
+            }
+
+            .mega-rectangle-img {
+                height: 293px !important;
+            }
+
+            .mega-rectangle-blank-height {
+                height: 156px !important;
+            }
+
+            .mega-rectangle-blank-height-margin {
+                height: 156px !important;
+            }
+
+            .outside-ad-img {
+                height: 100% !important;
+                min-height: 100% !important;
+                max-height: 100% !important;
+            }
+
+            .bildtext-ad-img {
+                height: 100% !important;
+                min-height: 100% !important;
+                max-height: 100% !important;
+                margin-top: 0 !important;
+            }
+            .nl-box-shadow-core {
+              border-radius: 4px !important;
+              box-shadow: 0px 2.25px 4px 0px rgba(0, 0, 0, 0.10) !important;
+            }
+            .nl-box-shadow {
+              border-radius: 4px !important;
+              box-shadow: 0px 2.25px 4px 0px rgba(0, 0, 0, 0.10) !important;
+              padding: 24px !important;
+              margin-bottom: 24px !important;
+            }
+            .nl-w-100 {
+              width: 100% !important;
+            }
+            .mobile-d-none {
+              display: none !important;
+            }
+            .mobile-d-block {
+              display: block !important;
+            }
+            .comic-img-radius {
+              border-radius: 4px 4px 0 0 !important;
+            }
+            .nl-padding-x-16 {
+              padding-left: 16px !important;
+              padding-right: 16px !important;
+            }
+            .nl-text-decoration-none {
+              text-decoration: none !important;
+            }
+            .mobile-img-source {
+              padding-bottom: 4px !important;
+              border-bottom: 1px solid #EDEDED !important;
+            }
+            .mobile-img-source-secondary {
+              padding-top: 12px !important;
+              border-bottom: 1px solid #EDEDED !important;
+            }
+            .nl-full-img-height {
+              min-height: 320px !important;
+              max-height: 320px !important;
+            }
+            .ads-ck-editor-desc {
+              font-size: 13px !important;
+              line-height: 20px !important;
+            }
+            .bild-text-desc-height {
+              min-height: 100px !important;
+            }
+            .shoppable-description-height {
+              min-height: 260px !important;
+            }
+            .social-description-height {
+              min-height: 240px !important;
+            }
+            .background-cover {
+              background-size: cover !important;
+            }
+            .background-contain {
+              background-size: contain !important;
+            }
+        }
+        .ck-editor-desc a, .ck-editor-desc a:hover, .ck-editor-desc a:focus {
+          color: #616161 !important;
+          text-decoration: underline !important;
+        }
+        .ck-editor-desc p {
+          margin: 0 !important;
+          display: inline !important;
+        }
+        .ads-ck-editor-desc a, .ads-ck-editor-desc a:hover, .ads-ck-editor-desc a:focus {
+          color: #212121 !important;
+          text-decoration: underline !important;
+        }
+    </style>
+  </head>
+
+  <body style="background: #e5e5e5; font-family: 'Source Sans 3', sans-serif !important;">
+    <center width="100%" style="max-width: 640px; table-layout: fixed; font-family: 'Source Sans 3', sans-serif !important; margin-left: auto; margin-right: auto; background: #FFFFFE !important; background-image: linear-gradient(#FFFFFE,#FFFFFE) !important; color:#212121; word-break: break-word; word-wrap: break-word; margin-top: 32px; margin-bottom: 32px; border: 1px solid #eaeaea;" class="mobile-dark">
+      <!-- Preheader (remove comment) -->
+      <div style="font-size: 0px; line-height: 1px; mso-line-height-rule: exactly; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+        <!-- Add Preheader Text Here (85-100 characters in length) -->
+      </div>
+      <!-- End Preheader (remove comment) -->
+
+      <!--[if (gte mso 9)|(IE)]>
+        <table width="640" align="center" style="border-spacing:0;background: #FFFFFE !important;background-image: linear-gradient(#FFFFFE,#FFFFFE) !important; color: #212121;" role="presentation">
+          <tr>
+            <td style="padding:0;">
+        <![endif]-->
+
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="640" align="center" style="border-spacing:0;background: #FFFFFE !important;background-image: linear-gradient(#FFFFFE,#FFFFFE) !important;color:#212121;" role="presentation">
+          <tr>
+            <td style="padding:0;">
+      <![endif]-->
+        <!--=============== Global ==================-->
+        <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family: 'Source Sans 3', sans-serif !important; background: #FFFFFE !important; background-image: linear-gradient(#FFFFFE,#FFFFFE) !important; color:#212121; border-spacing: 0; word-break: break-word; word-wrap: break-word;" role="presentation">
+          <tr>
+            <td width="100%">
+              <!--=============== Top header ==================-->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="100%" colspan="5">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="100%">
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td width="100%" height="32"></td>
+                            </tr>
+                            <tr>
+                              <td align="center" width="240" height="51" colspan="5">
+                                <img src="https://cockpit.ronorp.net/assets/images/logo.png" alt="logo" style="width: 240px; height: auto;"/>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="8"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="100%" height="8"></td>
+                      </tr>
+                      <tr>
+                        <td width="100%" align="center">
+                          <div>
+                            <span style="color: #212121; font-size: 14px; font-weight: 700; line-height: 22px; letter-spacing: 0.07px; margin-top: 5px;">
+                              10th January 2025
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="100%" height="16"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!--================ Bigbanner ads =============-->
+              <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tr>
+                  <td width="24"></td>
+                  <td width="592">
+                    <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                      <tr>
+                        <td width="100%">
+                          <a href="https://www.google.com/" target="_blank" style="display: block; text-decoration: none; color: #FFFFFE; font-family: 'Source Sans 3', sans-serif; font-size: 22px; font-weight: 700; line-height: 26px; margin: 0; width: 100%;">
+                            <table cellpadding="0" cellspacing="0" border="0" class="darkmode-bg" style="background-color: transparent; border-spacing: 0; width: 100%; color: #212121;">
+                              <tr>
+                                <td width="100%">
+                                  <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                                    <tr>
+                                      <td class="bigbanner-main-height background-contain" style="background-image: url(https://ronreload.blob.core.windows.net/prod/user-uploads/images/1736179133.gif); min-height: 191px; background-position: bottom; background-repeat: no-repeat; background-size: auto; width: 100%;">
+                                        <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                                            <tr>
+                                              <td width="100%" class="bigbanner-height">
+                                                  <!--[if (gte mso 9)|(IE)]>
+                                                      <div style="margin-top: 41px"></div>
+                                                  <![endif]-->
+                                                  <div class="bigbanner-height-margin" style="margin-top: 41px"></div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="bigbanner-main-shadow" style="background-image: url(https://cockpit.ronorp.net/backend/assets/images/gradient-small-box-mid-align.png); min-height: 150px; height: 150px; background-position: bottom; background-repeat: no-repeat; background-size: cover; width: 100%; padding: 16px 16px 8px 16px;">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                    <tr>
+                                                      <td width="100%">
+                                                        <a href="https://www.google.com/" target="_blank" style="display: block; text-decoration: none; color: #FFFFFE; font-family: 'Source Sans 3', sans-serif; font-size: 22px; font-weight: 700; line-height: 26px; margin: 0;">
+                                                          <h3 class="mobile-heading" style="color: #FFFFFE; font-family: 'Source Sans 3', sans-serif; font-size: 22px; font-weight: 700; line-height: 26px; margin: 0; word-break: break-word; word-wrap: break-word;">
+                                                            Welcome to Bigbanner
+                                                          </h3>
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td width="100%" height="12" class="heading-space-height" height="12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <div class="ads-ck-editor-desc" style="margin: 0; color: #FFFFFE; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.07px; word-break: break-word; word-wrap: break-word;">
+                                                          This is a big banner where you can watch all kinds of promotions and eye catching things with lots.
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td width="100%" class="desc-space-height" height="48"></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td class="desktop-bigbanner-btn-box" style="text-align: right">
+                                                        <a href="https://www.google.com/" target="_blank" style="color: #212121; font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 700; line-height: normal; letter-spacing: 0.5px; text-decoration: none; display: inline-block; padding: 8px 28px; border-radius: 8px; text-transform: capitalize; background-color: #FFFFFE;">
+                                                          Shop now
+                                                        </a>
+                                                      </td>
+                                                    </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td class="mobile-bigbanner-btn-box bigbanner-mobile-btn" style="text-align: right; display: none;">
+                                                <a class="mobile-btn" href="https://www.google.com/" target="_blank" style="color: #212121; font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 700; line-height: normal; letter-spacing: 0.5px; text-decoration: none; display: inline-block; padding: 8px 28px; border-radius: 8px; text-transform: capitalize; background-color: #FFFFFE;">
+                                                  Shop now
+                                                </a>
+                                              </td>
+                                            </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="100%" height="24"></td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                      </tr>
+                    </table> 
+                  </td>
+                  <td width="24"></td>
+                </tr>
+              </table>             
+
+              <!--=================== Main footer start ===================-->
+              <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footer-dark-bg" style="background-color: #000001 !important;">
+                <tr>
+                  <td width="100%" height="24" colspan="5"></td>
+                </tr>
+                <tr>
+                    <td width="111"></td>
+                    <td colspan="3" align="center">
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td width="100%" align="center">
+                              <a href="https://www.google.com/" target="_blank" style="display: inline-block; white-space: nowrap; text-decoration: none; color: #FFFFFE; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.05px; margin-top: 0; margin-bottom: 0;">About Ron</a>
+                              <span style="display: inline-block; padding: 0 8px; vertical-align: middle;">
+                                <span style="display: inline-block; width: 1px; height: 15px; background-color: #FFFFFE;"></span>
+                              </span>
+                              <a href="https://www.google.com/" target="_blank" style="display: inline-block; white-space: nowrap; text-decoration: none; color: #FFFFFE; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.05px; margin-top: 0; margin-bottom: 0;">Contact Us</a>
+                              <span style="display: inline-block; padding: 0 8px; vertical-align: middle;">
+                                <span style="display: inline-block; width: 1px; height: 15px; background-color: #FFFFFE;"></span>
+                              </span>
+                              <a href="https://www.google.com/" target="_blank" style="display: inline-block; white-space: nowrap; text-decoration: none; color: #FFFFFE; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.05px; margin-top: 0; margin-bottom: 0;">Help</a>
+                              <span style="display: inline-block; padding: 0 8px; vertical-align: middle;">
+                                <span style="display: inline-block; width: 1px; height: 15px; background-color: #FFFFFE;"></span>
+                              </span>
+                              <a href="https://www.google.com/" target="_blank" style="display: inline-block; white-space: nowrap; text-decoration: none; color: #FFFFFE; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.05px; margin-top: 0; margin-bottom: 0;">Privacy</a>
+                              <span style="display: inline-block; padding: 0 8px; vertical-align: middle;">
+                                <span style="display: inline-block; width: 1px; height: 15px; background-color: #FFFFFE;"></span>
+                              </span>
+                              <a href="https://www.google.com/" target="_blank" style="display: inline-block; white-space: nowrap; text-decoration: none; color: #FFFFFE; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.05px; margin-top: 0; margin-bottom: 0;">Unsubscribe</a>
+                            </td>
+                          </tr>
+                        </table>
+                    </td>
+                    <td width="111"></td>
+                </tr>
+                <tr>
+                  <td width="100%" height="24" colspan="5" style="border-bottom: 1px solid #656565"></td>
+                </tr>
+                <tr>
+                  <td width="100%" height="24" colspan="5"></td>
+                </tr>
+                <tr>
+                  <td align="center" width="100%" colspan="5">
+                      <p style="text-align: center; color: #FFFFFE; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0.05px; margin-top: 0; margin-bottom: 0;">
+                        © by Ron Orp 2025
+                      </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="100%" height="32" colspan="5">
+                    <!--[if (gte mso 9)|(IE)]>
+                        <div style="margin-top: 32px"></div>
+                    <![endif]-->
+                    <div style="margin-top: 32px"></div>
+                  </td>
+                </tr>
+              </table>
+              <!--=================== Main footer end ===================-->
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+          <![endif]-->
+        </center>
+      </body>
+    </html>
+
